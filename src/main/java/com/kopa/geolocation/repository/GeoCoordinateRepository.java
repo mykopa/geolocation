@@ -10,8 +10,8 @@ import java.util.List;
 
 public interface GeoCoordinateRepository extends JpaRepository<GeoCoordinate, Long> {
 
-    @Query(value = "SELECT gc FROM GeoCoordinate gc WHERE gc.longitude > :leftDownLongitude AND gc.longitude < :rightUpLongitude " +
-            "AND gc.latitude > :leftDownLatitude AND gc.latitude < :rightUpLatitude")
+    @Query(value = "SELECT gc FROM GeoCoordinate gc WHERE gc.longitude >= :leftDownLongitude AND gc.longitude <= :rightUpLongitude " +
+            "AND gc.latitude >= :leftDownLatitude AND gc.latitude <= :rightUpLatitude")
     public List<GeoCoordinate> findAllByCoordinateRange(@Param("leftDownLongitude") BigDecimal leftDownLongitude,
                                                         @Param("leftDownLatitude") BigDecimal leftDownLatitude,
                                                         @Param("rightUpLongitude") BigDecimal rightUpLongitude,

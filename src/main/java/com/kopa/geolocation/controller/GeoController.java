@@ -17,11 +17,6 @@ public class GeoController {
     @Autowired
     private GeoCoordinateRepository geoCoordinateRepository;
 
-    @GetMapping("{id}")
-    public GeoCoordinate getVehicle(@PathVariable Long id) {
-        return geoCoordinateRepository.findById(id).get();
-    }
-
     @GetMapping
     public List<GeoCoordinate> findVehicles(@RequestParam BigDecimal leftDownLongitude,
                                             @RequestParam BigDecimal leftDownLatitude,

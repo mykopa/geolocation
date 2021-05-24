@@ -1,6 +1,7 @@
 package com.kopa.geolocation.model;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import javax.validation.ConstraintViolation;
@@ -14,6 +15,7 @@ import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Disabled
 class GeoCoordinateTest {
 
     private static Validator validator;

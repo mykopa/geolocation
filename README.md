@@ -7,18 +7,9 @@ On request return the list of vehicles that are located within a given rectangle
 
 ##Build:
 ```
-mvnw clean package -DskipTests
+mvnw clean package
 ```
 ##Run
-Copy the generated .jar file to "docker" directory
-```
-cp target/geolocation-0.0.1-SNAPSHOT.jar docker
-```
-go to "docker" directory
-```
-cd docker
-```
-Start the application
 ```
 docker-compose up
 ```

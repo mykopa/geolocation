@@ -2,6 +2,7 @@ package com.kopa.geolocation.controller;
 
 import com.kopa.geolocation.model.GeoCoordinate;
 import com.kopa.geolocation.repository.GeoCoordinateRepository;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
+@Disabled
 @ExtendWith(SpringExtension.class)
 @WebMvcTest
 @AutoConfigureMockMvc

@@ -9,11 +9,10 @@ services:
       POSTGRES_USER: geouser
       POSTGRES_PASSWORD: geopassword
     restart: always
-  app:
+  geolocation-service:
+    container_name: geolocation-service
     image: geolocation:latest
-    build:
-      context: .
-    container_name: geo-application
+    build: ./geolocation-service
     ports:
       - 8080:8080
     depends_on:

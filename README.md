@@ -35,6 +35,11 @@ GET:127.0.0.1:8080/geo?leftDownLongitude=2&leftDownLatitude=41&rightUpLongitude=
 ```
 rectangle defined as pair of coordinates (left down and right up corners)
 
+##Grafana
+```
+http://127.0.0.1:3000
+```
+
 ##Run tests
 
 To start the application and run tests locally the next ENVIRONMENT variables should be defined:

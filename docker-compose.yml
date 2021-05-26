@@ -23,4 +23,15 @@ services:
       - SPRING_DATASOURCE_PASSWORD=geopassword
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
 
+  grafana-server:
+    build: ./docker/grafana
+    container_name: geolocation-grafana-server
+    ports:
+      - 3000:3000
+
+  prometheus-server:
+    build: ./docker/prometheus
+    container_name: geolocation-prometheus-server
+    ports:
+      - 9090:9090
 
